@@ -1,3 +1,265 @@
-#my {
-    color: white
+@font-face {
+    font-family: 'TheSeasons';
+    src: url('foto_strona/Fontspring-DEMO-theseasons-reg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+ 
+/* Styl ogólny */
+body {
+    font-family: 'Cardo', serif;
+    background-color: #A08872;
+    line-height: 1.6;
+}
+
+/* Nagłówek z obrazem */
+.witamy {
+    position: relative;
+    background-image: url('foto_strona/o_nas_2.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ustawia układ w kolumnie */
+    align-items: left;    /* Wyrównuje elementy w poziomie */
+    justify-content: center; /* Wyrównuje elementy w pionie */
+    text-align: left;     /* Wyrównuje tekst do środka */
+    color: rgba(61, 48, 32, 0.6);
+    overflow: hidden;
+}
+
+.witamy1, .witamy2 {
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40x; /* Odstęp między tekstami */
+}
+
+.witamy1 h1 {
+    font-family: 'TheSeasons', serif;
+    font-weight: lighter;
+    font-size: 4em; /* Rozmiar czcionki dla nagłówka */
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+    color: rgba(26, 20, 12, 0.6);
+    margin-top: -300px;
+}
+.witamy2 h1 {
+    font-family: 'TheSeasons', serif;
+    font-weight: lighter;
+    font-size: 30px; /* Rozmiar czcionki dla nagłówka */
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+    margin-top: -200px;
+    color: rgba(26, 20, 12, 0.6);
+}
+
+/* Nasza historia */
+
+.our-story {
+    padding: 50px 30px; /* Odstępy wewnętrzne wokół tekstu */
+    text-align: left;
+    font-family: 'Cardo', serif; /* Czcionka dopasowana do reszty strony */
+    color: #3D3020; /* Kolor tekstu */
+    margin: 10px; /* Odstęp od innych sekcji i wyśrodkowanie */
+    width: 80%; /* Szerokość sekcji */
+}
+
+.our-story h1 {
+    font-size: 35px; /* Większy rozmiar czcionki dla nagłówka */
+    font-weight: 700; /* Pogrubiony tekst */
+    margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+    color: #3D3020; /* Kolor nagłówka */
+}
+
+.our-story p {
+    font-size: 20px; /* Rozmiar czcionki tekstu */
+    line-height: 1.8; /* Większa wysokość linii dla lepszej czytelności */
+    color: #3D3020; /* Kolor tekstu */
+    margin-bottom: 20px; /* Odstęp poniżej akapitu */
+}
+
+.our-story p br {
+    margin-bottom: 10px; /* Odstęp po każdym break-line */
+}
+
+/* Styl poziomej linii */
+.divider {
+    border: 0;
+    height: 2px; /* Grubość linii */
+    background-color: #3D3020; /* Kolor linii, dopasowany do tekstu */
+    margin-top: 20px; /* Odstęp od tekstu */
+    margin-bottom: 5; /* Odstęp poniżej linii */
+}
+
+
+
+/* Galeria */
+.latest-works {
+    padding: 50px 30px; /* Odstępy wewnętrzne wokół tekstu */
+    text-align: left;
+    font-family: 'Cardo', serif; /* Czcionka dopasowana do reszty strony */
+    color: #3D3020; /* Kolor tekstu */
+    margin: 10px; /* Odstęp od innych sekcji i wyśrodkowanie */
+    width: 80%; /* Szerokość sekcji */
+}
+
+.latest-works h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.filter-buttons .button {
+    background: rgba(61, 48, 32, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 35px;
+    text-decoration: none;
+    
+}
+
+.gallery {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-item {
+
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* CTA */
+.cta {
+    background: #A08872;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #3D3020; /* Kolor tekstu */
+}
+
+.cta p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #3D3020; /* Kolor tekstu */
+}
+
+.cta .button {
+    background: rgba(61, 48, 32, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+/* Nawigacja */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+#menuToggle {
+    position: relative;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+#menuToggle label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 35px;
+    height: 30px;
+}
+
+#menuToggle label span {
+    background-color: rgba(61, 48, 32, 0.6);;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#mobilemenu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    border-radius: 10px;
+    background-color: #A08872; /* Półprzezroczyste tło menu */
+}
+
+#mobilemenu li {
+    margin: 15px 0;
+}
+
+#mobilemenu li a {
+    color: rgba(61, 48, 32, 0.6);;
+    text-decoration: none;
+    font-size: 60px;
+}
+   
+  footer {
+      color: #E5D9CE;
+      display: flex;
+      z-index:10;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 20px;
+      gap: 1150px;
+  }
+   
+  footer .copyright {
+      flex: 1;
+      font-size: 18px;
+  }
+   
+  footer .social_media {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+   
+  footer .social_media a {
+      color: #E5D9CE;
+      text-decoration: none;
+      font-size: 20px;
+  }

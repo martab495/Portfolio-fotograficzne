@@ -17,13 +17,13 @@
   }
    
   /* Styl ogólny */
-  body {
+body {
       font-family: 'Cardo', serif;
       background-color: #A08872;
       color: #E5D9CE;
       line-height: 1.6;
   }
-  .middle {
+.middle {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -36,7 +36,7 @@
   }
    
    
-  .middle h1 {
+.middle h1 {
       font-family: 'TheSeasons';
       font-weight: lighter;
       text-align: center;
@@ -44,68 +44,77 @@
       color: #ffffff;
   }
    
-  .left-side img {
+.left-side img {
       display: block;
       max-width: 50%;
       height: auto;
       z-index: -1;
   }
    
-  /* Nawigacja */
-  nav {
-      color: #E5D9CE;
-      position: fixed;
-      top: 0;
-      right:0;
-      z-index: 1000;
-  }
-   
-  #menuToggle {
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-  }
-   
-  #menuToggle input {
-      display: none;
-  }
-   
-  #menuToggle label {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-  }
-   
-  #menuToggle label span {
-      background: #fff;
-      height: 3px;
-      width: 25px;
-      border-radius: 2px;
-  }
-   
-  #mobilemenu {
-      list-style: none;
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-      background: #333;
-  }
-   
-  #mobilemenu li {
-      margin: 10px 0;
-  }
-   
-  #mobilemenu li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2rem;
-  }
-   
-  #menuToggle input:checked ~ #mobilemenu {
-      display: flex;
-  }
+.middle.hidden h1 {
+    display: none;
+}
+
+.middle.hidden {
+    display: none;
+}
+
+/* Nawigacja */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+#menuToggle {
+    position: relative;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+#menuToggle label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 35px;
+    height: 30px;
+}
+
+#menuToggle label span {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#mobilemenu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    border-radius: 10px;
+}
+
+#mobilemenu li {
+    margin: 15px 0;
+}
+
+#mobilemenu li a {
+    color: #E5D9CE;
+    text-decoration: none;
+    font-size: 60px;
+}
    
   footer {
       color: #E5D9CE;
@@ -117,7 +126,7 @@
       text-align: center;
       position: fixed;
       bottom: 0;
-      left:20px;
+      left: 20px;
       gap: 1150px;
   }
    

@@ -18,10 +18,10 @@
         <img src="foto_strona/tytulowa.jpg" alt="Opis zdjęcia">
     </div>
     <!-- Menu -->
-    <nav role="navigation">
+    <nav>
         <div id="menuToggle">
-            <input type="checkbox">
-            <label for="mobilemenu">
+            <input type="checkbox" id="menuCheckbox">
+            <label for="menuCheckbox">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,6 +35,7 @@
             </ul>
         </div>
     </nav>
+    
     <footer>
         <div class="copyright">&copy;doublemarta</div>
         <div class="social_media">
@@ -42,11 +43,25 @@
             <a href="#">Instagram</a>
         </div>
     </footer>
+
     <script>
         $(document).ready(function() {
-            $("#menuToggle label").click(function() {
-                $('#menuToggle div').slideToggle(300);
-                $("#menu").toggleClass("hidden");
+            // Obsługuje otwieranie i zamykanie menu po kliknięciu
+            $("#menuCheckbox").change(function() {
+                if (this.checked) {
+                    $("#mobilemenu").slideDown(300);
+                    $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
+                } else {
+                    $("#mobilemenu").slideUp(300);
+                    $(".middle").removeClass("hidden");  // Pokazuje napis i prostokąt
+                }
+            });
+
+            // Obsługuje ukrycie menu po opuszczeniu obszaru
+            $("#mobilemenu").mouseleave(function() {
+                $("#menuCheckbox").prop("checked", false);  // Odznacza checkbox
+                $("#mobilemenu").slideUp(300);  // Ukrywa menu
+                $(".middle").removeClass("hidden");  // Pokazuje napis i prostokąt
             });
         });
     </script>
