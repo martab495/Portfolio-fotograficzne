@@ -7,5 +7,5 @@ git pull origin vol1_Bielak
 git commit -m "Zmiany-konieczny opis"
 
 3. Standardowe polecenie po wprowadzeniu zmian:
-git pull origin vol1_Bielak
+git push origin vol1_Bielak
 

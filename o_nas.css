@@ -14,11 +14,11 @@ body, h1, ul, li, a {
 /* Styl ogólny */
 body {
     font-family: 'Cardo', serif;
-    background-color: #A08872;
+    background-color: #86715c;
     line-height: 1.6;
 }
 
-/* Nagłówek z obrazem */
+/* Witamy + cytat */
 .witamy {
     position: relative;
     background-image: url('foto_strona/o_nas_2.JPG');
@@ -41,7 +41,7 @@ body {
     z-index: 1;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 40x; /* Odstęp między tekstami */
+    margin-bottom: 35px; /* Odstęp między tekstami */
 }
 
 .witamy1 h1 {
@@ -57,50 +57,51 @@ body {
 .witamy2 h1 {
     font-family: 'TheSeasons', serif;
     font-weight: lighter;
-    font-size: 30px; /* Rozmiar czcionki dla nagłówka */
+    font-size: 30px;
     line-height: 1.6;
     text-align: left;
     margin: 0;
     margin-top: -200px;
     color: rgba(26, 20, 12, 0.6);
+    /*background-color: hsla(36, 13%, 43%, 0.329);*/ /* opcjonalnie - tło cytatu*/
 }
 
 /* Nasza historia */
 
 .our-story {
-    padding: 50px 30px; /* Odstępy wewnętrzne wokół tekstu */
+    padding: 50px 30px;
     text-align: left;
-    font-family: 'Cardo', serif; /* Czcionka dopasowana do reszty strony */
-    color: #3D3020; /* Kolor tekstu */
+    font-family: 'Cardo', serif;
+    color: #E5D9CE; /* Kolor tekstu */
     margin: 10px; /* Odstęp od innych sekcji i wyśrodkowanie */
-    width: 80%; /* Szerokość sekcji */
+    width: 90%; /* Szerokość sekcji */
 }
 
 .our-story h1 {
     font-size: 35px; /* Większy rozmiar czcionki dla nagłówka */
     font-weight: 700; /* Pogrubiony tekst */
     margin-bottom: 20px; /* Odstęp poniżej nagłówka */
-    color: #3D3020; /* Kolor nagłówka */
+    color: #E5D9CE; /* Kolor nagłówka */
 }
 
 .our-story p {
     font-size: 20px; /* Rozmiar czcionki tekstu */
     line-height: 1.8; /* Większa wysokość linii dla lepszej czytelności */
-    color: #3D3020; /* Kolor tekstu */
+    color: #E5D9CE; /* Kolor tekstu */
     margin-bottom: 20px; /* Odstęp poniżej akapitu */
 }
 
 .our-story p br {
-    margin-bottom: 10px; /* Odstęp po każdym break-line */
+    margin-bottom: 10px; /* Odstęp po każdym br */
 }
 
-/* Styl poziomej linii */
+/* poziomia linia */
 .divider {
     border: 0;
     height: 2px; /* Grubość linii */
-    background-color: #3D3020; /* Kolor linii, dopasowany do tekstu */
+    background-color: #E5D9CE; /* Kolor linii */
     margin-top: 20px; /* Odstęp od tekstu */
-    margin-bottom: 5; /* Odstęp poniżej linii */
+    margin-bottom: 5px; /* Odstęp poniżej linii */
 }
 
 
@@ -109,10 +110,10 @@ body {
 .latest-works {
     padding: 50px 30px; /* Odstępy wewnętrzne wokół tekstu */
     text-align: left;
-    font-family: 'Cardo', serif; /* Czcionka dopasowana do reszty strony */
-    color: #3D3020; /* Kolor tekstu */
+    font-family: 'Cardo', serif;
+    color: #E5D9CE; /* Kolor tekstu */
     margin: 10px; /* Odstęp od innych sekcji i wyśrodkowanie */
-    width: 80%; /* Szerokość sekcji */
+    width: 90%; /* Szerokość sekcji */
 }
 
 .latest-works h2 {
@@ -121,13 +122,12 @@ body {
 }
 
 .filter-buttons .button {
-    background: rgba(61, 48, 32, 0.6);
+    background: rgba(26, 20, 12, 0.6);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 35px;
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 .gallery {
@@ -147,7 +147,6 @@ body {
 
 /* CTA */
 .cta {
-    background: #A08872;
     padding: 50px;
     text-align: center;
     margin: 10px;
@@ -156,17 +155,17 @@ body {
 .cta h2 {
     font-size: 35px;
     margin-bottom: 10px;
-    color: #3D3020; /* Kolor tekstu */
+    color: #E5D9CE; /* Kolor tekstu */
 }
 
 .cta p {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #3D3020; /* Kolor tekstu */
+    color: #E5D9CE; /* Kolor tekstu */
 }
 
 .cta .button {
-    background: rgba(61, 48, 32, 0.6);
+    background: rgba(26, 20, 12, 0.6);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -219,7 +218,7 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
-    background-color: #A08872; /* Półprzezroczyste tło menu */
+    background-color: #423323af; /* półprzezroczyste tło menu */
 }
 
 #mobilemenu li {
@@ -227,39 +226,111 @@ nav {
 }
 
 #mobilemenu li a {
-    color: rgba(61, 48, 32, 0.6);;
+    color:#E5D9CE;
     text-decoration: none;
     font-size: 60px;
 }
    
-  footer {
-      color: #E5D9CE;
-      display: flex;
-      z-index:10;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 20px;
-      gap: 1150px;
-  }
-   
-  footer .copyright {
-      flex: 1;
-      font-size: 18px;
-  }
-   
-  footer .social_media {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-  }
-   
-  footer .social_media a {
-      color: #E5D9CE;
-      text-decoration: none;
-      font-size: 20px;
-  }
+footer {
+    color: #E5D9CE;
+    display: flex;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
+    justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
+    align-items: center;
+    padding: 10px 20px; /* Dodaj odstępy wewnętrzne */
+    position: fixed;
+    bottom: 0;
+    width: 95%; /* Rozciągnij stopkę na pełną szerokość */
+    z-index: 10;
+}
+
+footer .copyright {
+    text-align: left; /* Wyrównaj tekst do lewej */
+    font-size: 18px;
+    margin-bottom: 5px; /* Opcjonalne, by dodać miejsce w razie zawijania */
+}
+
+footer .social_media {
+    display: flex;
+    justify-content: flex-end; /* Wyrównaj elementy do prawej */
+    gap: 7px; /* Odstęp między ikonami */
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli miejsca jest mało */
+}
+
+footer .social_media a {
+    color: #E5D9CE;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+  /* Wersja dla małych ekranów */
+
+@media (max-width: 768px) {
+    .witamy {
+        height: 70vh; /* wysokość nagłówka */
+        text-align: center;
+    }
+
+    .witamy1 h1 {
+        padding: 10px;
+        font-size: 35px;
+        margin-top: -175px;
+    }
+
+    .witamy2 h1 {
+        padding: 10px;
+        font-size: 18px;
+        /*background-color: hsla(36, 13%, 43%, 0.329);*/
+        margin-top: -120px;
+    }
+
+    .our-story, .latest-works, .cta {
+        padding: 20px; /* Zmniejsz odstępy */
+        width: 90%; /* Dopasuj szerokość do ekranu */
+    }
+
+    .our-story h1, .latest-works h2, .cta h2 {
+        font-size: 1.5em; /* Zmniejsz rozmiar nagłówków */
+    }
+
+    .our-story p, .cta p {
+        font-size: 1em; /* Zmniejsz rozmiar tekstu */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* dwa elementy w rzędzie */
+        gap: 5px;
+    }
+
+    .gallery-item {
+        height: 150px;
+    }
+
+    #mobilemenu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        right: 0; 
+        width: 50%;
+        height: 50vh;
+        z-index: 1000; /* Ustaw odpowiedni indeks */
+        font-size: 20px;
+    }
+
+    #mobilemenu li a {
+        font-size: 1.5em; /* Zmniejsz rozmiar czcionki w menu */
+    }
+
+    .cta .button {
+        font-size: 25px;
+    }
+
+    .filter-buttons .button {
+        font-size: 25px;
+    }
+}

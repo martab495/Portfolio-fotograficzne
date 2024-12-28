@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@300;400;700&display=swap" rel="stylesheet"></head>
 </head>
 <body>
+    <!--Witamy + cytat -->
     <div class="witamy">
         <div class="witamy1">
             <h1>Witamy</h1>
@@ -36,7 +37,7 @@
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <hr class="divider"> <!-- Pozioma linia -->
+        <hr class="divider"> <!-- pozioma linia -->
     </section>
 
     <!-- Galeria -->
@@ -53,7 +54,7 @@
             <div class="gallery-item" style="background-image: url('foto_strona/DSC_5054.JPG');"></div>
             <div class="gallery-item" style="background-image: url('foto_strona/DSC_5007.JPG');"></div>
         </div>
-        <hr class="divider"> <!-- Pozioma linia -->
+        <hr class="divider"> <!-- pozioma linia -->
     </section>
 
     <!-- Kontakt -->
@@ -92,22 +93,22 @@
 
     <script>
         $(document).ready(function() {
-            // Obsługuje otwieranie i zamykanie menu po kliknięciu
+            //obsługuje otwieranie i zamykanie menu po kliknięciu
             $("#menuCheckbox").change(function() {
                 if (this.checked) {
                     $("#mobilemenu").slideDown(300);
-                    $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
+                    $(".middle").addClass("hidden");
                 } else {
                     $("#mobilemenu").slideUp(300);
-                    $(".middle").removeClass("hidden");  // Pokazuje napis i prostokąt
+                    $(".middle").removeClass("hidden");
                 }
             });
 
-            // Obsługuje ukrycie menu po opuszczeniu obszaru
+            //obsługa ukrycia menu po opuszczeniu obszaru
             $("#mobilemenu").mouseleave(function() {
-                $("#menuCheckbox").prop("checked", false);  // Odznacza checkbox
-                $("#mobilemenu").slideUp(300);  // Ukrywa menu
-                $(".middle").removeClass("hidden");  // Pokazuje napis i prostokąt
+                $("#menuCheckbox").prop("checked", false);
+                $("#mobilemenu").slideUp(300);
+                $(".middle").removeClass("hidden"); 
             });
         });
     </script>

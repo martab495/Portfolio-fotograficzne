@@ -19,7 +19,7 @@
   /* Styl ogólny */
 body {
       font-family: 'Cardo', serif;
-      background-color: #A08872;
+      background-color: #86715c;
       color: #E5D9CE;
       line-height: 1.6;
   }
@@ -30,7 +30,7 @@ body {
       width: 700px;
       height:120px;
       transform: translate(-50%, -50%);
-      background-color: rgba(109, 86, 58, 0.6);
+      background-color: #53412eaf;
       border-radius: 17px;
       padding: 35px;
   }
@@ -86,7 +86,7 @@ nav {
 }
 
 #menuToggle label span {
-    background-color: #fff;
+    background-color: rgba(61, 48, 32, 0.6);;
     height: 4px;
     width: 100%;
     border-radius: 3px;
@@ -104,6 +104,7 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
+    background-color: #423323af; /* Półprzezroczyste tło menu */
 }
 
 #mobilemenu li {
@@ -111,39 +112,39 @@ nav {
 }
 
 #mobilemenu li a {
-    color: #E5D9CE;
+    color:#E5D9CE;
     text-decoration: none;
     font-size: 60px;
 }
-   
-  footer {
-      color: #E5D9CE;
-      display: flex;
-      z-index:10;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 20px;
-      gap: 1150px;
-  }
-   
-  footer .copyright {
-      flex: 1;
-      font-size: 18px;
-  }
-   
-  footer .social_media {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-  }
-   
-  footer .social_media a {
-      color: #E5D9CE;
-      text-decoration: none;
-      font-size: 20px;
-  }
+
+footer {
+    color: #E5D9CE;
+    display: flex;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
+    justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
+    align-items: center;
+    padding: 10px 20px; /* Dodaj odstępy wewnętrzne */
+    position: fixed;
+    bottom: 0;
+    width: 95%; /* Rozciągnij stopkę na pełną szerokość */
+    z-index: 10;
+}
+
+footer .copyright {
+    text-align: left; /* Wyrównaj tekst do lewej */
+    font-size: 18px;
+    margin-bottom: 5px; /* Opcjonalne, by dodać miejsce w razie zawijania */
+}
+
+footer .social_media {
+    display: flex;
+    justify-content: flex-end; /* Wyrównaj elementy do prawej */
+    gap: 7px; /* Odstęp między ikonami */
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli miejsca jest mało */
+}
+
+footer .social_media a {
+    color: #E5D9CE;
+    text-decoration: none;
+    font-size: 20px;
+}
