@@ -31,3 +31,8 @@ Komentarze do projektu od Marta B:
 - podstrona O nas jest już gotowa w obu wersjach - na duże i małe ekrany
 
 Komentarze do projektu od Marta H:
+1. 29.12.2024
+- zmieniłam obrazek, żeby wyświetlał się na całej stronie,
+- zmieniłam menu: teraz zaraz po otwarciu strony jest niewidoczne, dodałam klasę show,
+ -przy pierwszym kliknięciu menu się pojawaia, przy każdym kolejnym rozwija,
+ -zmeiniłam tez kolor tła na stronie głównej na brak tła bo tak jest ładniej
