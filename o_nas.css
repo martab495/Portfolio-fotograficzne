@@ -223,7 +223,7 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
-    /*background-color: #423323af; półprzezroczyste tło menu */
+    background-color: rgba(207, 174, 154, 0.90);/*półprzezroczyste tło menu */
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 #mobilemenu.show
