@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>O nas</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel ="stylesheet" type="text/css" href="kontakt.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=ddevice-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@300;400;700&display=swap" rel="stylesheet"></head>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Lewy kontener z obrazem i cytatem -->
+        <div class="left-side">
+            <div class="left-side-text">
+                <h1>Masz jakieś pytania?<br>
+                    Zapraszamy do kontaktu!</h1>
+            </div>
+        </div>
+
+        <!-- Prawy kontener - formularz konatkowy -->
+        <div class="right">
+            <form id="contactForm" class="contact-form">
+                <h2>Formularz kontaktowy</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">Imię</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Wpisz swoje imię" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Nazwisko</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Wpisz swoje nazwisko" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Wpisz swój email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numer telefonu</label>
+                        <input type="text" id="phone" name="phone" placeholder="Wpisz swój numer telefonu" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" placeholder="Wpisz swoją wiadomość" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </div>
+    <hr class="divider"> <!-- pozioma linia -->
+    <!-- Kontener z mapką i informacjami -->
+
+    <div class="info-section">
+        <div class="info-cards">
+            <div class="info-card">
+                <i class="phone"></i>
+                <h2>Kontakt</h2>
+                <h3>(+48) 765 665 777</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+            <div class="info-card">
+                <i class="email"></i>
+                <h2>Email</h2>
+                <h3>doublemarta@gamil.com</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+            <div class="info-card">
+                <i class="map"></i>
+                <h2>Lokalizacja</h2>
+                <h3>Kraków</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81987.1605638!2d19.92239223578718!3d50.046981069992974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2zS3Jha8Ozdw!5e0!3m2!1spl!2spl!4v1735492763053!5m2!1spl!2spl"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <nav>
+        <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox">
+            <label for="menuCheckbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul id="mobilemenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="o_nas.html">O nas</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <footer>
+        <div class="copyright">&copy;doublemarta</div>
+        <div class="social_media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            //obsługuje otwieranie i zamykanie menu po kliknięciu
+            $("#menuCheckbox").change(function() {
+                if (this.checked) {
+                    $("#mobilemenu").slideDown(300);
+                    $(".middle").addClass("hidden");
+                } else {
+                    $("#mobilemenu").slideUp(300);
+                    $(".middle").removeClass("hidden");
+                }
+            });
+
+            //obsługa ukrycia menu po opuszczeniu obszaru
+            $("#mobilemenu").mouseleave(function() {
+                $("#menuCheckbox").prop("checked", false);
+                $("#mobilemenu").slideUp(300);
+                $(".middle").removeClass("hidden");
+            });
+        });
+    </script>
+</body>
+</html>

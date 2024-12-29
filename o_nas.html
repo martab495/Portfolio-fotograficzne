@@ -99,7 +99,7 @@
             if (this.checked) {
                 $("#mobilemenu").slideDown(300);
                 $("#mobilemenu").addClass("show");
-                $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
+                $(".witamy2").addClass("hidden");  // Ukrywa
 
                 //dodawanie event listener dla kliknięć poza menu
                 $(document).on("click.outsideMenu", function(event) {
@@ -120,7 +120,7 @@
             $("#menuCheckbox").prop("checked", false);
             $("#mobilemenu").slideUp(300);
             $("#mobilemenu").removeClass("show");
-            $(".middle").removeClass("hidden");
+            $(".witamy2").removeClass("hidden");
 
             $(document).off("click.outsideMenu");
         }

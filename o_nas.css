@@ -34,6 +34,9 @@ body {
     color: rgba(61, 48, 32, 0.6);
     overflow: hidden;
 }
+.witamy2.hidden {
+    display: none;
+}
 
 .witamy1, .witamy2 {
     position: relative;
@@ -220,7 +223,7 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
-    background-color: #423323af; /*półprzezroczyste tło menu */
+    /*background-color: #423323af; półprzezroczyste tło menu */
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 #mobilemenu.show
@@ -234,7 +237,7 @@ nav {
 }
 
 #mobilemenu li a {
-    color:#E5D9CE;
+    color: rgba(26, 20, 12, 0.6);
     text-decoration: none;
     font-size: 60px;
 }

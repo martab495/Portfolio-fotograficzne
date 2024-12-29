@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'TheSeasons';
+    src: url('foto_strona/Fontspring-DEMO-theseasons-reg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Cardo', serif;
+    background-color: #86715c;
+    line-height: 1.6;
+}
+
+/* Zdjęcie z cytatem i formularz kontaktowy */
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Lewy kontener z obrazem i cytatem */
+
+.left-side {
+    flex: 1;
+    position: relative;
+    background: url('foto_strona/DSC_4448.JPG') center/cover no-repeat;
+}
+
+.left-side-text {
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    padding: 20px;
+    font-weight: lighter;
+    line-height: 2;
+    text-align: left;
+    margin-top: 45px;
+
+}
+
+.left-side-text h1 {
+    font-family: 'Cardo', serif;
+    font-size: 55px;
+    color: rgba(26, 20, 12, 1);
+    margin-left: 45px;
+}
+
+/* Prawy kontener - formularz konatkowy */
+.right {
+    flex: 1;
+    background-color: #86715c;
+    padding: 45px;
+    font-family: 'Cardo', serif;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    text-align: left;
+    font-size: 40px;
+    color: rgba(26, 20, 12, 1);
+    margin-bottom: 60px;
+}
+
+.contact-form .form-row {
+    display: flex;
+    gap: 15px; /* ddstęp między polami */
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: rgba(26, 20, 12, 1);
+    font-weight: bold;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #E5D9CE;
+    background: none;
+    outline: none;
+    color: #E5D9CE;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #E5D9CE;
+    background: none;
+    outline: none;
+    resize: none;
+    color: #E5D9CE;
+}
+
+.contact-form textarea:focus,
+.contact-form input:focus {
+    border-bottom: 1px solid #000;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #E5D9CE;
+}
+
+.contact-form button {
+
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Cardo', serif;
+    background: rgba(26, 20, 12, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+.contact-form button:hover {
+    background-color: #000;
+}
+
+/* poziomia linia */
+.divider {
+    border: 0;
+    height: 2px; /* Grubość linii */
+    background-color: rgba(26, 20, 12, 0.6); /* Kolor linii */
+    width: 100%;
+    margin: 0;
+}
+
+/* Kontener z mapką i informacjami */
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 95%;
+    height: 80vh;
+    padding: 20px;
+    margin-top: 120px;
+}
+
+.info-cards {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.info-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #E5D9CE;
+}
+
+.info-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: rgba(26, 20, 12, 1);
+    text-align: center;
+}
+
+.info-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: rgba(26, 20, 12, 1);
+    text-align: center;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: rgba(26, 20, 12, 1);
+    text-align: left;
+}
+
+.info-card i {
+    font-size: 30px;
+    color: rgba(26, 20, 12, 1);
+    margin-bottom: 10px;
+}
+
+.map-container {
+    width: 95%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+/* Nawigacja */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+#menuToggle {
+    position: relative;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+#menuToggle label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 35px;
+    height: 30px;
+}
+
+#menuToggle label span {
+    background-color: rgba(61, 48, 32, 0.6);;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#mobilemenu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    border-radius: 10px;
+    background-color: #423323af; /* półprzezroczyste tło menu */
+}
+
+#mobilemenu li {
+    margin: 15px 0;
+}
+
+#mobilemenu li a {
+    color:#E5D9CE;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+footer {
+    color: #E5D9CE;
+    display: flex;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
+    justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
+    align-items: center;
+    padding: 10px 20px; /* Dodaj odstępy wewnętrzne */
+    position: fixed;
+    bottom: 0;
+    width: 95%; /* Rozciągnij stopkę na pełną szerokość */
+    z-index: 10;
+}
+
+footer .copyright {
+    text-align: left; /* Wyrównaj tekst do lewej */
+    font-size: 18px;
+    margin-bottom: 5px; /* Opcjonalne, by dodać miejsce w razie zawijania */
+}
+
+footer .social_media {
+    display: flex;
+    justify-content: flex-end; /* Wyrównaj elementy do prawej */
+    gap: 7px; /* Odstęp między ikonami */
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli miejsca jest mało */
+}
+
+footer .social_media a {
+    color: #E5D9CE;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Wersja dla małych ekranów */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side {
+        height: 100vh;
+    }
+
+    .left-side-text {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .left-side-text h1 {
+        font-size: 36px;
+        margin-left: 20px;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .contact-form label {
+        font-size: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .info-card h2 {
+        font-size: 16px;
+    }
+
+    .info-card h3 {
+        font-size: 14px;
+    }
+
+    .info-card p {
+        font-size: 12px;
+    }
+
+    .map-container iframe {
+        height: 450px;
+        margin-top: 20px;
+    }
+
+    #mobilemenu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50vh;
+        z-index: 1000; /* Ustaw odpowiedni indeks */
+        font-size: 20px;
+    }
+
+    #mobilemenu li a {
+        font-size: 1.5em; /* Zmniejsz rozmiar czcionki w menu */
+    }
+
+}
