@@ -169,16 +169,22 @@ footer .social_media a {
 @media (max-width: 768px) {
     .middle {
         background-color: rgba(207, 174, 154, 0.40);
-        height: 7vh; /* wysokość nagłówka */
-        text-align: center;
+        height: 8vh; /* wysokość nagłówka */
         width: 88vw;
+        text-align: center;
         top: 20vh;
         border-radius: 40px;
         padding: 0px;
     }
 
     .middle h1 {
-        font-size: 35px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align:center;
+        font-size: 6vw;
+        margin:0px;
         color: #fffffff;
     }
     .left-side {
@@ -216,4 +222,22 @@ footer .social_media a {
         color: #341E12;
         font-size: 1.5em;
     }
+    footer {
+        padding: 1vw 2vw; /* Dodaj odstępy wewnętrzne */
+        width: 95%; /* Rozciągnij stopkę na pełną szerokość */
+    }
+
+    footer .copyright {
+        font-size: 10px;
+        margin-bottom: -1vw;
+    }
+
+    footer .social_media {
+        margin-right: 1vw;
+    }
+
+    footer .social_media a {
+        font-size: 15px;
+    }
+
 }
