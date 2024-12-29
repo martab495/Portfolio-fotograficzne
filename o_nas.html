@@ -93,24 +93,39 @@
     </footer>
 
      <script>
-        $(document).ready(function() {
-            $("#menuCheckbox").change(function() {
-                if (this.checked) {
-                    $("#mobilemenu").slideDown(300);
-                    $("#mobilemenu").addClass("show"); // Pokazuje menu
-                } else {
-                    $("#mobilemenu").slideUp(300);
-                    $("#mobilemenu").removeClass("show"); // Ukrywa menu
-                }
-            });
+    $(document).ready(function() {
+        // Obsługuje otwieranie i zamykanie menu po kliknięciu
+        $("#menuCheckbox").change(function() {
+            if (this.checked) {
+                $("#mobilemenu").slideDown(300);
+                $("#mobilemenu").addClass("show");
+                $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
 
-            //obsługa ukrycia menu po opuszczeniu obszaru
-            $("#mobilemenu").mouseleave(function() {
-                $("#menuCheckbox").prop("checked", false);
-                $("#mobilemenu").slideUp(300);
-                $(".middle").removeClass("hidden");
-            });
+                //dodawanie event listener dla kliknięć poza menu
+                $(document).on("click.outsideMenu", function(event) {
+                    if (!$(event.target).closest("#mobilemenu, #menuCheckbox").length) {
+                        closeMenu();
+                    }
+                });
+            } else {
+                closeMenu();
+            }
         });
-    </script>
+
+        $("#mobilemenu").mouseleave(function() {
+            closeMenu();
+        });
+
+        function closeMenu() {
+            $("#menuCheckbox").prop("checked", false);
+            $("#mobilemenu").slideUp(300);
+            $("#mobilemenu").removeClass("show");
+            $(".middle").removeClass("hidden");
+
+            $(document).off("click.outsideMenu");
+        }
+    });
+</script>
+
 </body>
 </html>
