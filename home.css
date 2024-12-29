@@ -43,14 +43,32 @@ body {
       font-size: 90px;
       color: #ffffff;
   }
-   
+/*
 .left-side img {
       display: block;
-      max-width: 50%;
-      height: auto;
+      max-width: 100%;
+      height: 100vh;
       z-index: -1;
   }
-   
+  */
+.left-side {
+    position: relative; /* Kontekst dla obrazka */
+    width: 50%; /* Połowa szerokości strony */
+    height: 100vh; /* Pełna wysokość widoku */
+    float: left; /* Wyrównanie kontenera do lewej */
+    overflow: hidden; /* Ukryj wystające elementy */
+}
+
+.left-side img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Dopasuj do szerokości kontenera */
+    height: 100%; /* Dopasuj do wysokości kontenera */
+    object-fit: cover; /* Utrzymuje proporcje i wypełnia kontener */
+    z-index: -1; /* Umieść za innymi elementami */
+}
+
 .middle.hidden h1 {
     display: none;
 }
