@@ -8,8 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=ddevice-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@300;400;700&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!--Witamy + cytat -->
     <div class="witamy">
@@ -91,16 +92,15 @@
         </div>
     </footer>
 
-    <script>
+     <script>
         $(document).ready(function() {
-            //obsługuje otwieranie i zamykanie menu po kliknięciu
             $("#menuCheckbox").change(function() {
                 if (this.checked) {
                     $("#mobilemenu").slideDown(300);
-                    $(".middle").addClass("hidden");
+                    $("#mobilemenu").addClass("show"); // Pokazuje menu
                 } else {
                     $("#mobilemenu").slideUp(300);
-                    $(".middle").removeClass("hidden");
+                    $("#mobilemenu").removeClass("show"); // Ukrywa menu
                 }
             });
 
@@ -108,7 +108,7 @@
             $("#mobilemenu").mouseleave(function() {
                 $("#menuCheckbox").prop("checked", false);
                 $("#mobilemenu").slideUp(300);
-                $(".middle").removeClass("hidden"); 
+                $(".middle").removeClass("hidden");
             });
         });
     </script>

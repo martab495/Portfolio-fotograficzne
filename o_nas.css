@@ -208,7 +208,9 @@ nav {
 
 #mobilemenu {
     list-style-type: none;
-    display: flex;
+    opacity: 0; /* Menu niewidoczne */
+    visibility: hidden;
+    display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -218,7 +220,13 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
-    background-color: #423323af; /* półprzezroczyste tło menu */
+    background-color: #423323af; /*półprzezroczyste tło menu */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#mobilemenu.show
+{
+    opacity:1;
+    visibility:visible;
 }
 
 #mobilemenu li {

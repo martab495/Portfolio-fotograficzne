@@ -50,9 +50,11 @@
             $("#menuCheckbox").change(function() {
                 if (this.checked) {
                     $("#mobilemenu").slideDown(300);
+                    $("#mobilemenu").addClass("show");
                     $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
                 } else {
                     $("#mobilemenu").slideUp(300);
+                    $("#mobilemenu").removeClass("show");
                     $(".middle").removeClass("hidden");  // Pokazuje napis i prostokąt
                 }
             });
