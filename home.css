@@ -30,7 +30,7 @@ body {
       width: 700px;
       height:120px;
       transform: translate(-50%, -50%);
-      background-color: #53412eaf;
+      background-color: rgba(109, 86, 58, 0.40);
       border-radius: 17px;
       padding: 35px;
   }
@@ -164,4 +164,56 @@ footer .social_media a {
     color: #E5D9CE;
     text-decoration: none;
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .middle {
+        background-color: rgba(207, 174, 154, 0.40);
+        height: 7vh; /* wysokość nagłówka */
+        text-align: center;
+        width: 88vw;
+        top: 20vh;
+        border-radius: 40px;
+        padding: 0px;
+    }
+
+    .middle h1 {
+        font-size: 35px;
+        color: #fffffff;
+    }
+    .left-side {
+        position: relative;
+        width: 100vw;
+        height: 100vh; /* Pełna wysokość widoku */
+        float: none;
+        overflow: hidden;
+    }
+    .left-side img {
+        object-position: right top;
+    }
+    #menuToggle label span {
+        background-color: #CABAAC;
+    }
+
+    #mobilemenu {
+        background-color: rgba(207, 174, 154, 0.90);
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 80vh;
+        z-index: 1000;
+        font-size: 20px;
+    }
+
+    #mobilemenu li a {
+        color: #341E12;
+        font-size: 1.5em;
+    }
 }
