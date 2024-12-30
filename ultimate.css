@@ -68,7 +68,7 @@ nav {
     right: 0;
     width: 450px;
     border-radius: 10px;
-    /*background-color: #423323af;  półprzezroczyste tło menu */
+    background-color: rgba(207, 174, 154, 1);/*półprzezroczyste tło menu */
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 #mobilemenu.show
@@ -76,15 +76,17 @@ nav {
     opacity:1;
     visibility:visible;
 }
+
 #mobilemenu li {
     margin: 15px 0;
 }
 
 #mobilemenu li a {
-    color:#E5D9CE;
+    color: rgba(26, 20, 12, 0.6);
     text-decoration: none;
     font-size: 60px;
 }
+
 
 footer {
     color: #E5D9CE;
@@ -92,9 +94,10 @@ footer {
     flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
     justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
     align-items: center;
-    padding: 1vw 2vw; /* Dodaj odstępy wewnętrzne */
+    padding: 1vw 2vw; /*Dodaj odstępy wewnętrzne */
     position: fixed;
     bottom: 0;
+    height: auto;
     width: 95%; /* Rozciągnij stopkę na pełną szerokość */
     z-index: 10;
 }
@@ -102,7 +105,7 @@ footer {
 footer .copyright {
     text-align: left; /* Wyrównaj tekst do lewej */
     font-size: 18px;
-    margin-bottom: 5px; /* Opcjonalne, by dodać miejsce w razie zawijania */
+    margin-bottom: 4px; /* Opcjonalne, by dodać miejsce w razie zawijania */
 }
 
 footer .social_media {
