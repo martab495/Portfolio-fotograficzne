@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'TheSeasonslight';
+    src: url('foto_strona/Fontspring-DEMO-theseasons-lt.otf') format('truetype');
+    font-weight: normal;
+
+}
+.upright {
+    position: absolute;
+    top: 4vh;
+    left:2vw;
+  }
+.upright h1 {
+      position: absolute;
+      font-family: 'TheSeasonslight';
+      font-weight: lighter;
+      font-style: italic;
+      text-align: center;
+      font-size: 6vh;
+      color: #E5D9CE;
+  }
+.divider {
+    position:relative;
+    top:7vh;
+    left: -4vw;
+    border: 0;
+    height: 1px; /* Grubość linii*/
+    background-color: #E5D9CE;
+    width: 57vw;
+    z-index: -1;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-between; /* Równe odstępy między kolumnami */
+    gap: 40px; /* Odstęp między kolumnami */
+    position: absolute;
+    left:30px;
+    right:30px;
+    top: 0;
+    z-index: 2;
+}
+.portfolio-container p{
+      margin: 40px;
+      font-family: 'TheSeasonslight';
+      font-weight: lighter;
+      font-style: italic;
+      text-align: center;
+      font-size: 3vh;
+      color: #E5D9CE;
+}
+.column1{
+    display: inline;
+    width: 200px;
+    height: auto;
+    position:relative;
+    top: 140px;
+}
+.column2 {
+    position:relative;
+    display: inline;
+    width: 250px;
+    height: auto;
+    top: 100px;
+}
+.column3 {
+    position:relative;
+    display: inline;
+    width: 300px;
+    height: auto;
+    top: 140px;
+}
+
+.column4 {
+    position:relative;
+    display: block;
+    width: 200px;
+    height: auto;
+    top: 140px;
+}
+.column5 {
+    position:relative;
+    display: block;
+    width: 300px;
+    height: auto;
+    top: 66.5px;
+}
+
+.portfolio-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E5D9CE;
+    border-bottom: 5px solid #E5D9CE;
+}
+
+.portfolio-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*
+.portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    z-index: 10000;
+    gap: 20px;
+}
+
+.column1{
+    display: inline;
+    width:260px;
+    height:auto;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 7px;
+    right: 80px;
+}
+.column2 {
+    display: inline;
+    width:260px;
+    height:auto;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 30px;
+}
+.column3 {
+    display: inline;
+    width:400px;
+    height:auto;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 365px;
+}
+.column4 {
+    display: inline;
+    width:400px;
+    height:auto;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    right: 788px;
+}
+.column2 p{
+    width: 50%;
+}
+.portfolio-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px #E5D9CE;
+    border-bottom: 5px #E5D9CE;
+}
+
+.portfolio-container img.hor {
+    grid-column: span 2;
+}
+.portfolio-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+*/

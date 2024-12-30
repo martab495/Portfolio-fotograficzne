@@ -4,11 +4,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  /*
-  body{
-      background-color: #E5D9CE ;
-      margin:0;
-  }*/
+
   /* Ogólny reset stylów */
   body, h1, ul, li, a {
       margin: 0;
