@@ -1,57 +1,82 @@
-.info-section {
+.middle {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      width: 70%;
+      height: 9%;
+      transform: translate(-50%, -50%);
+      border-radius: 17px;
+      padding: 35px;
+  }
+
+.middle h1 {
+      font-family: 'TheSeasons';
+      font-weight: lighter;
+      text-align: left;
+      font-style: italic;
+      font-size:50px;
+      color: #ffffff;
+  }
+
+.packages {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto;
     max-width: 95%;
     height: 80vh;
     padding: 20px;
-    margin-top: 120px;
+    margin-top: 200px;
 }
 
-.info-cards {
+.box {
     width: 95%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 60px;
 }
-
-.info-card {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
+.box1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
     border-radius: 10px;
-    background-color: #E5D9CE;
+    border: 3px solid #CABAAC;
+    overflow: hidden;
 }
 
-.info-card h2 {
-    margin: 10px 0;
-    font-size: 20px;
-    color: rgba(26, 20, 12, 1);
+.box1 img {
+    flex: 1; /* Zajmuje połowę szerokości kontenera */
+    width: 100%; /* Dopasowanie do szerokości */
+    height: 100%; /* Dopasowanie do wysokości */
+    object-fit: cover; /* Zachowanie proporcji obrazka */
+    border-right: 3px solid #CABAAC; /* Opcjonalnie: separator między zdjęciem a tekstem */
+}
+
+.box1 .text {
+    flex: 1; /* Zajmuje połowę szerokości kontenera */
+    display: flex; /* Wyrównanie wewnętrzne */
+    flex-direction: column; /* Układ pionowy dla tekstu */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    padding: 20px; /* Odstępy wewnętrzne */
     text-align: center;
+    background-color: rgba(109, 86, 58, 0.1); /* Opcjonalne tło */
 }
 
-.info-card h3 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: rgba(26, 20, 12, 1);
-    text-align: center;
-}
-
-.info-card p {
-    font-size: 14px;
-    color: rgba(26, 20, 12, 1);
-    text-align: left;
-}
-
-.info-card i {
+h2 {
+    font-weight: 300;
+    margin-bottom: 10px;
     font-size: 30px;
     color: rgba(26, 20, 12, 1);
-    margin-bottom: 10px;
 }
 
-.map-container {
+.box1 .text p {
+    font-size: 16px;
+    color: rgba(26, 20, 12, 0.8);
+}
+
+.calender {
     width: 95%;
     overflow: hidden;
     border-radius: 10px;
