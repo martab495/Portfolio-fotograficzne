@@ -26,20 +26,22 @@
     height: 80vh;
     padding: 20px;
     margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .box {
-    width: 95%;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów do nowego wiersza */
+    gap: 20px; /* Odstęp między kontenerami */
+    justify-content: space-around; /* Rozmieszczenie kontenerów */
     margin-bottom: 60px;
 }
+
 .box1 {
+    width: calc(50% - 20px); /* Szerokość kontenera - dwa w rzędzie, z uwzględnieniem odstępów */
+    height: 300px; /* Ustalona wysokość */
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 300px;
     border-radius: 10px;
     border: 3px solid #CABAAC;
     overflow: hidden;
@@ -76,8 +78,12 @@ h2 {
     color: rgba(26, 20, 12, 0.8);
 }
 
-.calender {
-    width: 95%;
-    overflow: hidden;
+#calendar {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
+    background-color: #fff;
 }
+
