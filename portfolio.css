@@ -4,6 +4,9 @@
     font-weight: normal;
 
 }
+.portfolio_container_mobile{
+    display: none;
+}
 .upright {
     position: absolute;
     top: 4vh;
@@ -19,20 +22,21 @@
       color: #E5D9CE;
   }
 .divider {
-    position:relative;
-    top:7vh;
-    left: -4vw;
-    border: 0;
-    height: 1px; /* Grubość linii*/
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
     background-color: #E5D9CE;
-    width: 57vw;
+    width: 70%;
     z-index: -1;
 }
 
 .portfolio-container {
     display: flex;
     justify-content: space-between; /* Równe odstępy między kolumnami */
-    gap: 40px; /* Odstęp między kolumnami */
+    gap: 40px;
     position: absolute;
     left:30px;
     right:30px;
@@ -92,38 +96,32 @@
     max-width: 100%;
     margin-bottom: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /*border: 1px solid #E5D9CE;
-    border-bottom: 5px solid #E5D9CE;*/
 }
-/* Obrazki w .column1 i .column3 (każdy nth-child) */
+
 .column1 img:nth-child(n),
 .column3 img:nth-child(n) {
     border: 1px solid #E5D9CE;
-    border-bottom: 3px solid #E5D9CE; /* Minimalistyczne różnicowanie */
+    border-bottom: 3px solid #E5D9CE;
 }
 
-/* Parzyste obrazki (nth-child(2n)) w .column1, .column2, i .column5 */
 .column1 img:nth-child(2n),
 .column2 img:nth-child(2n),
 .column5 img:nth-child(2n) {
-    border: 2px solid #E5D9CE; /* Grubsza linia */
+    border: 2px solid #E5D9CE;
     border-bottom: 4px solid #E5D9CE;
 }
 
-/* Co trzeci obrazek (nth-child(3n)) w .column2, .column4, i .column1 */
 .column2 img:nth-child(3n),
 .column4 img:nth-child(3n),
 .column1 img:nth-child(3n) {
     border: 1px solid #E5D9CE;
-    border-bottom: 2px solid #E5D9CE; /* Cieńsza dolna linia */
-    margin-bottom: 30px; /* Dodatkowy odstęp */
+    border-bottom: 2px solid #E5D9CE;
+    margin-bottom: 30px;
 }
-
-/* Co czwarty obrazek (nth-child(4n)) w .column4, .column3, i .column5 */
 .column4 img:nth-child(4n),
 .column3 img:nth-child(4n),
 .column5 img:nth-child(4n) {
-    border: 3px double #E5D9CE; /* Podwójna linia */
+    border: 3px double #E5D9CE;
     border-bottom: 6px double #E5D9CE;
 }
 .column4 img:nth-child(5n),
@@ -132,11 +130,11 @@
     border: 5px double #E5D9CE;
     border-bottom: 8px double #E5D9CE;
 }
-/* Minimalistyczne ramki dla obrazków w .column4 i .column5 */
+
 .column4 img:nth-child(7n),
 .column5 img:nth-child(7n) {
-    border: 2px solid #E5D9CE; /* Średnia grubość */
-    border-radius: 5px; /* Delikatne zaokrąglenie */
+    border: 2px solid #E5D9CE;
+    border-radius: 5px;
     border-bottom: 5px solid #E5D9CE;
 }
 
@@ -151,6 +149,63 @@ footer {
 footer .invit {
     font-weight:lighter;
     font-style:italic;
-    font-size: 20px;
+    font-size: 2vh;
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .upright h1 {
+      font-size: 4vh;
+  }
+    footer{
+        background-color: transparent;
+    }
+    footer .invit {
+       display:none;
+    }
+    .upright {
+        top: 3vh;
+        left: 6vw;
+      }
+     .divider {
+       margin: auto;
+        width: 100%;
+        top: 10vh;
+    }
+     .divider1 {
+        margin: auto;
+        height: 1px;
+        background-color: #E5D9CE;
+        z-index: -1;
+        width: 100%;
+    }
+    .portfolio-container {
+       display:none;
+    }
+    .portfolio_container_mobile p{
+          margin: auto;
+          font-family: 'TheSeasonslight';
+          font-weight: lighter;
+          font-style: italic;
+          text-align: center;
+          font-size: 2vh;
+          color: #E5D9CE;
+    }
+    .portfolio_container_mobile {
+        display: block;
+        text-align: center;
+        font-size: 0;
+        width: 98vw;
+        height: auto;
+        position: relative;
+        top: 12vh;
+        padding-bottom: 30px;
+    }
+    .portfolio_container_mobile img {
+        display: inline-block;
+        height: 12vh;
+        object-fit: cover;
+        margin: 1vw;
+    }
 }

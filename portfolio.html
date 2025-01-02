@@ -139,7 +139,11 @@
 
             </div>
         </div>
-
+    <div class="portfolio_container_mobile" id="portfolio_mobile">
+        <p> Let us be part of your amazing journey of life.</p>
+        <hr class="divider1">
+        <p> <br> </p>
+    </div>
 
     <!-- Menu -->
     <nav>
@@ -202,6 +206,25 @@
             $(document).off("click.outsideMenu");
         }
     });
+</script>
+<script>
+    //sortowanie elementów w kolejności rosnącej
+    const portfolio_mob = document.getElementById('portfolio_mobile');
+    const usedImages = Array.from(document.querySelectorAll('.portfolio-container img'));
+    const sortedImages = usedImages.sort((a, b) => {
+        const numA = parseInt(a.src.match(/(\d+)\.jpg$/)?.[1] || 0, 10);
+        const numB = parseInt(b.src.match(/(\d+)\.jpg$/)?.[1] || 0, 10);
+        return numA - numB;
+    });
+    //dodawanie obrazków do kontenera mobilnego
+    sortedImages.forEach(img => {
+        const imgElement = document.createElement('img');
+        imgElement.src = img.src;
+        imgElement.alt = img.alt;
+        portfolio_mob.appendChild(imgElement);
+    });
+
+
 </script>
 
 </body>
