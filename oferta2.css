@@ -26,7 +26,7 @@
     height: 80vh;
     padding: 20px;
     margin-top: 200px;
-    margin-bottom: 100px;
+    margin-bottom: 400px;
 }
 
 .box {
@@ -38,6 +38,7 @@
 }
 
 .box1 {
+    position:relative;
     width: calc(50% - 20px); /* Szerokość kontenera - dwa w rzędzie, z uwzględnieniem odstępów */
     height: 300px; /* Ustalona wysokość */
     display: flex;
@@ -45,6 +46,7 @@
     border-radius: 10px;
     border: 3px solid #CABAAC;
     overflow: hidden;
+     transition: all 0.3s ease;
 }
 
 .box1 img {
@@ -63,7 +65,6 @@
     align-items: center; /* Wyśrodkowanie w poziomie */
     padding: 20px; /* Odstępy wewnętrzne */
     text-align: center;
-    background-color: rgba(109, 86, 58, 0.1); /* Opcjonalne tło */
 }
 
 h2 {
@@ -86,4 +87,28 @@ h2 {
     border-radius: 10px;
     background-color: #fff;
 }
+.box1:hover {
+    transform: scale(1.03);
+    background-color: rgba(26, 20, 12, 1);
+}
+.box1 .price {
+    position: absolute;
+    color: #CABAAC;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    margin-right: 50%;
+    text-align: left;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease; /* Animacja */
+}
 
+.box1:hover .price {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 4;
+}
