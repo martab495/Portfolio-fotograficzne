@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel ="stylesheet" type="text/css" href="o_nas.css">
+    <link rel ="stylesheet" type="text/css" href="ultimate.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=ddevice-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
@@ -91,15 +92,14 @@
             <a href="#">Instagram</a>
         </div>
     </footer>
-
-     <script>
+<script>
     $(document).ready(function() {
         // Obsługuje otwieranie i zamykanie menu po kliknięciu
         $("#menuCheckbox").change(function() {
             if (this.checked) {
                 $("#mobilemenu").slideDown(300);
                 $("#mobilemenu").addClass("show");
-                $(".witamy2").addClass("hidden");  // Ukrywa
+                $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
 
                 //dodawanie event listener dla kliknięć poza menu
                 $(document).on("click.outsideMenu", function(event) {
@@ -120,7 +120,7 @@
             $("#menuCheckbox").prop("checked", false);
             $("#mobilemenu").slideUp(300);
             $("#mobilemenu").removeClass("show");
-            $(".witamy2").removeClass("hidden");
+            $(".middle").removeClass("hidden");
 
             $(document).off("click.outsideMenu");
         }

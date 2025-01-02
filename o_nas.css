@@ -1,22 +1,3 @@
-@font-face {
-    font-family: 'TheSeasons';
-    src: url('foto_strona/Fontspring-DEMO-theseasons-reg.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-body, h1, ul, li, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
-/* Styl ogólny */
-body {
-    font-family: 'Cardo', serif;
-    background-color: #86715c;
-    line-height: 1.6;
-}
 
 /* Witamy + cytat */
 .witamy {
@@ -175,105 +156,6 @@ body {
     font-size: 35px;
     text-decoration: none;
 }
-
-/* Nawigacja */
-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 10px;
-}
-
-#menuToggle {
-    position: relative;
-}
-
-#menuToggle input {
-    display: none;
-}
-
-#menuToggle label {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    width: 35px;
-    height: 30px;
-}
-
-#menuToggle label span {
-    background-color: rgba(61, 48, 32, 0.6);;
-    height: 4px;
-    width: 100%;
-    border-radius: 3px;
-}
-
-#mobilemenu {
-    list-style-type: none;
-    opacity: 0; /* Menu niewidoczne */
-    visibility: hidden;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 450px;
-    border-radius: 10px;
-    background-color: rgba(207, 174, 154, 0.90);/*półprzezroczyste tło menu */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-#mobilemenu.show
-{
-    opacity:1;
-    visibility:visible;
-}
-
-#mobilemenu li {
-    margin: 15px 0;
-}
-
-#mobilemenu li a {
-    color: rgba(26, 20, 12, 0.6);
-    text-decoration: none;
-    font-size: 60px;
-}
-   
-footer {
-    color: #E5D9CE;
-    display: flex;
-    flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
-    justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
-    align-items: center;
-    padding: 10px 20px; /* Dodaj odstępy wewnętrzne */
-    position: fixed;
-    bottom: 0;
-    width: 95%; /* Rozciągnij stopkę na pełną szerokość */
-    z-index: 10;
-}
-
-footer .copyright {
-    text-align: left; /* Wyrównaj tekst do lewej */
-    font-size: 18px;
-    margin-bottom: 5px; /* Opcjonalne, by dodać miejsce w razie zawijania */
-}
-
-footer .social_media {
-    display: flex;
-    justify-content: flex-end; /* Wyrównaj elementy do prawej */
-    gap: 7px; /* Odstęp między ikonami */
-    flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli miejsca jest mało */
-}
-
-footer .social_media a {
-    color: #E5D9CE;
-    text-decoration: none;
-    font-size: 20px;
-}
-
   /* Wersja dla małych ekranów */
 
 @media (max-width: 768px) {
@@ -315,49 +197,6 @@ footer .social_media a {
 
     .gallery-item {
         height: 150px;
-    }
-
-    #menuToggle label span {
-        background-color: #CABAAC;
-    }
-
-    #mobilemenu {
-        background-color: rgba(207, 174, 154, 0.90);
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 70vw;
-        height: 80vh;
-        z-index: 1000;
-        font-size: 20px;
-    }
-
-    #mobilemenu li a {
-        color: #341E12;
-        font-size: 1.5em;
-    }
-    footer {
-        padding: 1vw 2vw; /* Dodaj odstępy wewnętrzne */
-        width: 95%; /* Rozciągnij stopkę na pełną szerokość */
-    }
-
-    footer .copyright {
-        font-size: 10px;
-        margin-bottom: -1vw;
-    }
-
-    footer .social_media {
-        margin-right: 1vw;
-    }
-
-    footer .social_media a {
-        font-size: 15px;
     }
 
     .cta .button {
