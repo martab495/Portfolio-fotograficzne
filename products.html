@@ -83,6 +83,52 @@
             </div>
         </div>
     </div>
+    <div class="form-container">
+    <h1>Formularz zamówienia</h1>
+    <form id="orderForm">
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Adres email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Numer telefonu:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="product">Produkt:</label>
+        <select id="product" name="product">
+            <option value="" disabled selected>Wybierz produkt</option>
+            <option value="60">Wydruk 30x40</option>
+            <option value="90">Wydruk 40x70</option>
+            <option value="130">Wydruk 60x100</option>
+            <option value="40">Kalendarz 20x20</option>
+            <option value="70">Kalendarz 30x40</option>
+            <option value="70">Fotoksiążka 20x30</option>
+            <option value="60">Fotoksiążka 20x20</option>
+            <option value="70">Fotoksiążka 30x20</option>
+            <option value="20">Kartka okolicznościowa 15x10</option>
+            <option value="0">Zamówienia specjalne</option>
+        </select>
+        <button type="button" id="addProductButton">Dodaj produkt</button>
+
+        <div id="selectedProductsContainer">
+            <h3>Wybrane produkty:</h3>
+            <ul id="selectedProductsList"></ul>
+        </div>
+
+        <!-- Ukryte pole do przesyłania danych o produktach -->
+        <input type="hidden" id="selectedProductsInput" name="selectedProducts">
+
+        <label for="comments">Uwagi:</label>
+        <textarea id="comments" name="comments" rows="6"></textarea>
+
+        <div class="total">
+            <strong>Łączna cena:</strong> <span id="totalPrice">0.00</span> zł
+        </div>
+
+        <button type="submit">Złóż zamówienie</button>
+    </form>
+</div>
 
     <footer>
         <div class="copyright">&copy;doublemarta</div>
@@ -118,6 +164,64 @@
     </footer>
 
 <script>
+     document.addEventListener("DOMContentLoaded", function () {
+        const productSelect = document.getElementById("product");
+        const addProductButton = document.getElementById("addProductButton");
+        const selectedProductsList = document.getElementById("selectedProductsList");
+        const selectedProductsInput = document.getElementById("selectedProductsInput");
+        const totalPriceElement = document.getElementById("totalPrice");
+
+        const selectedProducts = [];
+
+        // Aktualizacja wyświetlanej listy produktów
+        function updateSelectedProducts() {
+            selectedProductsList.innerHTML = "";
+
+            selectedProducts.forEach((product, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${product.name} - ${product.price} zł`;
+
+                // Dodanie funkcji usuwania po kliknięciu
+                li.addEventListener("click", function () {
+                    selectedProducts.splice(index, 1); // Usuwanie produktu z tablicy
+                    updateSelectedProducts(); // Aktualizacja listy
+                });
+
+                selectedProductsList.appendChild(li);
+            });
+
+            // Aktualizacja ukrytego pola JSON
+            selectedProductsInput.value = JSON.stringify(selectedProducts);
+
+            // Aktualizacja całkowitej ceny
+            const totalSum = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+            totalPriceElement.textContent = totalSum.toFixed(2);
+        }
+
+        // Dodawanie produktu do listy
+        function addProduct() {
+            const selectedOption = productSelect.options[productSelect.selectedIndex];
+            const productPrice = parseFloat(selectedOption.value) || 0;
+            const productName = selectedOption.textContent.trim();
+
+            if (!productName) {
+                alert("Proszę wybrać produkt przed dodaniem.");
+                return;
+            }
+
+            // Dodanie produktu do listy
+            selectedProducts.push({
+                name: productName,
+                price: productPrice,
+            });
+
+            updateSelectedProducts();
+        }
+
+        // Obsługa kliknięcia przycisku „Dodaj produkt”
+        addProductButton.addEventListener("click", addProduct);
+    });
+
     $(document).ready(function() {
         // Obsługuje otwieranie i zamykanie menu po kliknięciu
         $("#menuCheckbox").change(function() {
