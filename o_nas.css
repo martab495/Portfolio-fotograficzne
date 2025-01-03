@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 
 /* Witamy + cytat */
 .witamy {
@@ -6,7 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column; /* Ustawia układ w kolumnie */
     align-items: left;    /* Wyrównuje elementy w poziomie */
@@ -161,7 +164,7 @@
     .witamy {
         text-align: center;
         position: relative;
-        width: 100vw;
+        min-width: 100%;
         height: 100vh; /* Pełna wysokość widoku */
         float: none;
         overflow: hidden;
@@ -204,6 +207,7 @@
 
     .cta .button {
         font-size: 25px;
+        margin-bottom: 25px;
     }
 
     .filter-buttons .button {
