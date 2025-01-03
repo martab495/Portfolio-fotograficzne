@@ -218,6 +218,12 @@ body {
 /* Wersja dla małych ekranów */
 @media (max-width: 768px) {
 
+    .left-side-text h1 {
+        background-color: #57483a8c;
+        font-size: 30px;
+        border-radius: 5px;
+    }
+
     .container {
         flex-direction: column;
     }
