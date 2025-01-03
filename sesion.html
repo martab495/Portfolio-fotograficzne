@@ -88,7 +88,7 @@
         </div>
         <div class="umow">
             <h2>Umów sie na sesję już dziś!</h2>
-            <p>Skontaktuj sie z nami przez formularz: w polu 'Wpisz wiadomość' zamieść wybrany typ sesji oraz pakiet. </p>
+            <p>Skontaktuj sie z nami przez formularz: w polu 'Wpisz wiadomość' zamieść wybrany typ sesji, pakiet oraz proponowany termin ( w kalendarzu poniżej można zobaczyć zajęte już terminy). </p>
             <a href="kontakt.html" class="button">Zamów sesję!</a>
         </div>
         <div id="calendar"></div>
@@ -165,7 +165,9 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
+        var defaultView = window.matchMedia("(max-width: 768px)").matches ? 'listWeek' : 'dayGridMonth';
         var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: defaultView,
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
@@ -176,8 +178,8 @@
                 { id: 1, title: "Zajęty", start: "2025-01-23T10:00:00", end: "2025-01-23T12:00:00" },
                 { id: 2, title: "Zajęty", start: "2025-01-27T14:00:00", end: "2025-01-27T16:00:00" },
                 { id: 3, title: "Zajęty", start: "2025-02-07T09:00:00", end: "2025-02-07T11:00:00" },
-                { id: 4, title: "Zajęty", start: "2025-02-10T08:00:00", end: "2025-02-10T18:00:00", color: "green" },
-                { id: 5, title: "Zajęty", start: "2025-02-15T13:00:00", end: "2025-02-15T15:00:00", color: "blue" }
+                { id: 4, title: "Zajęty", start: "2025-02-10T08:00:00", end: "2025-02-10T18:00:00" },
+                { id: 5, title: "Zajęty", start: "2025-02-15T13:00:00", end: "2025-02-15T15:00:00" }
             ],
             slotMinTime: "08:00:00",
             slotMaxTime: "23:59:59"
@@ -185,6 +187,8 @@
 
         calendar.render();
     });
+
+
 </script>
 
 </body>

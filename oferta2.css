@@ -80,13 +80,15 @@ h2 {
 }
 
 #calendar {
-    max-width: 90%;
+    width: 800px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #E5D9CE;
+    color: #341E12;
 }
+
 .box1:hover {
     transform: scale(1.03);
     background-color: rgba(26, 20, 12, 1);
@@ -140,35 +142,6 @@ h2 {
       padding: 20px;
 }
 
-.calendar {
-    width: 1600px;
-    margin: 0 auto; /* Wyśrodkuj kalendarz */
-    padding: 20px;
-    background-color: #f9f9f9; /* Tło kalendarza */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.fc-toolbar button {
-    background-color: #4CAF50; /* Kolor tła przycisków */
-    color: white; /* Kolor tekstu przycisków */
-    border: none; /* Usuń obramowanie */
-    border-radius: 5px; /* Zaokrąglone rogi */
-    padding: 10px 15px; /* Odstępy wewnętrzne */
-    font-size: 14px; /* Rozmiar czcionki */
-    transition: background-color 0.3s ease; /* Efekt hover */
-}
-
-.fc-toolbar button:hover {
-    background-color: #45a049; /* Ciemniejszy zielony przy najechaniu */
-    cursor: pointer;
-}
-
-/* Stylizacja tytułu */
-.fc-toolbar-title {
-    font-size: 20px; /* Rozmiar czcionki tytułu */
-    font-weight: bold;
-    color: #333; /* Kolor tekstu */
-}
 
 @media (max-width: 768px){
     .middle {
@@ -185,10 +158,10 @@ h2 {
 
     .packages {
         max-width: 80%;
-        height: 80vh;
+        height: 90vh;
         padding: 20px;
         margin-top: 80px;
-        margin-bottom: 550px;
+        margin-bottom: 500px;
         margin-left: 5%;
     }
 
@@ -236,4 +209,25 @@ h2 {
         font-size: 15px;
         text-decoration: none;
     }
+     #calendar {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #calendar .fc-toolbar-title {
+        font-size: 12px;
+    }
+
+    #calendar .fc-toolbar button {
+        font-size: 7px;
+        padding: 3px;
+    }
+
+    #calendar .fc-daygrid-event {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+
 }
