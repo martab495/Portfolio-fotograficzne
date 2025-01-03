@@ -129,14 +129,12 @@
 
     <script>
         $(document).ready(function() {
-            // Obsługuje otwieranie i zamykanie menu po kliknięciu
             $("#menuCheckbox").change(function() {
                 if (this.checked) {
                     $("#mobilemenu").slideDown(300);
                     $("#mobilemenu").addClass("show");
-                    $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
+                    $(".middle").addClass("hidden");
 
-                    //dodawanie event listener dla kliknięć poza menu
                     $(document).on("click.outsideMenu", function(event) {
                         if (!$(event.target).closest("#mobilemenu, #menuCheckbox").length) {
                             closeMenu();
