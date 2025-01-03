@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel ="stylesheet" type="text/css" href="oferta2.css">
+    <link rel ="stylesheet" type="text/css" href="oferta3.css">
     <link rel ="stylesheet" type="text/css" href="ultimate.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=ddevice-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 <body>
     <div class="middle">
         <h1> Zobacz dostępne produkty</h1>
-        <p> Dla wszystkich produktów dostępna jest opcja dodania własnych zdjęć jak i opcja wybrania zdjęć z portfolio, lub też z prywatnej kolekcji. Wymiary formtów zawsze podane sa w centymetrach.</p>
+        <p> Dla wszystkich produktów dostępna jest opcja dodania własnych zdjęć jak i opcja wybrania zdjęć z portfolio, lub też z prywatnej kolekcji. Wymiary formatów zawsze podane sa w centymetrach.</p>
     </div>
     <div class="packages">
         <div class="box">
@@ -27,8 +28,7 @@
                     <li> 30x40: 60zł </li>
                      <li> 40x70: 90zł </li>
                      <li> 60x100: 130zł </li>
-
-                </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <ul>
                     <li> 20x20: 40 zł </li>
                     <li> 30x40: 70 zł</li>
-                </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <li> 20x30: 70 zł</li>
                     <li> 20x20: 60 zł</li>
                     <li> 30x20: 70 zł</li>
-                </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <li>
                         15x10: 20zł
                     </li>
-                </ul>
+                       </ul>
                      </div>
 
                 </div>
@@ -83,6 +83,52 @@
             </div>
         </div>
     </div>
+    <div class="form-container">
+    <h1>Formularz zamówienia</h1>
+    <form id="orderForm">
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Adres email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Numer telefonu:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="product">Produkt:</label>
+        <select id="product" name="product">
+            <option value="" disabled selected>Wybierz produkt</option>
+            <option value="60">Wydruk 30x40</option>
+            <option value="90">Wydruk 40x70</option>
+            <option value="130">Wydruk 60x100</option>
+            <option value="40">Kalendarz 20x20</option>
+            <option value="70">Kalendarz 30x40</option>
+            <option value="70">Fotoksiążka 20x30</option>
+            <option value="60">Fotoksiążka 20x20</option>
+            <option value="70">Fotoksiążka 30x20</option>
+            <option value="20">Kartka okolicznościowa 15x10</option>
+            <option value="0">Zamówienia specjalne</option>
+        </select>
+        <button type="button" id="addProductButton">Dodaj produkt</button>
+
+        <div id="selectedProductsContainer">
+            <h3>Wybrane produkty:</h3>
+            <ul id="selectedProductsList"></ul>
+        </div>
+
+        <!-- Pole ukryte, służy do przesyłania listy produktów przez formularz -->
+        <input type="hidden" id="selectedProductsInput" name="selectedProducts">
+
+        <label for="comments">Uwagi:</label>
+        <textarea id="comments" name="comments" rows="6"></textarea>
+
+        <div class="total">
+            <strong>Łączna cena:</strong> <span id="totalPrice">0.00</span> zł
+        </div>
+
+        <button type="submit">Złóż zamówienie</button>
+    </form>
+</div>
 
     <footer>
         <div class="copyright">&copy;doublemarta</div>
@@ -91,5 +137,121 @@
             <a href="#">Instagram</a>
         </div>
     </footer>
+<nav>
+        <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox">
+            <label for="menuCheckbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul id="mobilemenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="o_nas.html">O nas</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <footer>
+        <div class="copyright">&copy;doublemarta</div>
+        <div class="social_media">
+            <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared">Facebook</a>
+            <a href="https://youtu.be/nSDgHBxUbVQ?si=lprXq0LeU1N81Qna">Instagram</a>
+        </div>
+    </footer>
+
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+        const productSelect = document.getElementById("product");
+        const addProductButton = document.getElementById("addProductButton");
+        const selectedProductsList = document.getElementById("selectedProductsList");
+        const selectedProductsInput = document.getElementById("selectedProductsInput");
+        const totalPriceElement = document.getElementById("totalPrice");
+
+        const selectedProducts = [];
+
+        // Aktualizacja wyświetlanej listy produktów
+        function updateSelectedProducts() {
+            selectedProductsList.innerHTML = "";
+
+            selectedProducts.forEach((product, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${product.name} - ${product.price} zł`;
+
+                // Dodanie funkcji usuwania po kliknięciu
+                li.addEventListener("click", function () {
+                    selectedProducts.splice(index, 1); // Usuwanie produktu z tablicy
+                    updateSelectedProducts(); // Aktualizacja listy
+                });
+
+                selectedProductsList.appendChild(li);
+            });
+
+            // Aktualizacja ukrytego pola JSON
+            selectedProductsInput.value = JSON.stringify(selectedProducts);
+
+            // Aktualizacja całkowitej ceny
+            const totalSum = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+            totalPriceElement.textContent = totalSum.toFixed(2);
+        }
+
+        // Dodawanie produktu do listy
+        function addProduct() {
+            const selectedOption = productSelect.options[productSelect.selectedIndex];
+            const productPrice = parseFloat(selectedOption.value) || 0;
+            const productName = selectedOption.textContent.trim();
+
+            if (!productName) {
+                alert("Proszę wybrać produkt przed dodaniem.");
+                return;
+            }
+            // Dodanie produktu do listy
+            selectedProducts.push({
+                name: productName,
+                price: productPrice,
+            });
+            updateSelectedProducts();
+        }
+        // Obsługa kliknięcia przycisku „Dodaj produkt”
+        addProductButton.addEventListener("click", addProduct);
+    });
+
+    $(document).ready(function() {
+        // Obsługuje otwieranie i zamykanie menu po kliknięciu
+        $("#menuCheckbox").change(function() {
+            if (this.checked) {
+                $("#mobilemenu").slideDown(300);
+                $("#mobilemenu").addClass("show");
+                $(".middle").addClass("hidden");  // Ukrywa napis i prostokąt
+
+                //dodawanie event listener dla kliknięć poza menu
+                $(document).on("click.outsideMenu", function(event) {
+                    if (!$(event.target).closest("#mobilemenu, #menuCheckbox").length) {
+                        closeMenu();
+                    }
+                });
+            } else {
+                closeMenu();
+            }
+        });
+
+        $("#mobilemenu").mouseleave(function() {
+            closeMenu();
+        });
+
+        function closeMenu() {
+            $("#menuCheckbox").prop("checked", false);
+            $("#mobilemenu").slideUp(300);
+            $("#mobilemenu").removeClass("show");
+            $(".middle").removeClass("hidden");
+
+            $(document).off("click.outsideMenu");
+        }
+    });
+</script>
+
 </body>
 </html>

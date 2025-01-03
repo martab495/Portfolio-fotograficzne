@@ -1,0 +1,172 @@
+.packages{
+    margin-top: 200px;
+    margin-bottom: -100px;
+}
+h1 {
+    font-family: 'TheSeasons';
+      font-weight: lighter;
+      text-align: center;
+      font-size:30px;
+      color: #CABAAC;
+    padding: 20px;
+}
+.box1 {
+    position:relative;
+    width: calc(32% - 10px);
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    background-color: #86715c;
+    padding: 45px;
+    font-family: 'Cardo', serif;
+}
+
+#orderForm {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#orderForm h2 {
+    text-align: left;
+    font-size: 40px;
+    color: rgba(26, 20, 12, 1);
+    margin-bottom: 60px;
+}
+#orderForm h3 {
+    text-align: left;
+    font-size: 20px;
+    color: rgba(26, 20, 12, 1);
+    margin-bottom: 10px;
+}
+
+#orderForm label {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: rgba(26, 20, 12, 1);
+    font-weight: bold;
+}
+
+#orderForm input {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #E5D9CE;
+    background: none;
+    outline: none;
+    color: #E5D9CE;
+}
+
+#orderForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #E5D9CE;
+    background: none;
+    outline: none;
+    resize: none;
+    color: #E5D9CE;
+}
+
+#orderForm textarea:focus,
+#orderForm input:focus {
+    border-bottom: 1px solid #000;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+    color: #E5D9CE;
+}
+
+#orderForm button {
+
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Cardo', serif;
+    background: rgba(26, 20, 12, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size:15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+#orderForm button:hover {
+    background-color: #000;
+}
+#orderForm .total{
+    font-size: 25px;
+    margin: auto;
+}
+
+@media (max-width: 768px){
+    .packages{
+        margin-top: 150px;
+    }
+    .box1 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border: 2px solid #CABAAC;
+    }
+    .form-container {
+        margin-top: 80%;
+        padding: 15px;
+    }
+
+    #orderForm {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #orderForm h2 {
+        font-size: 20px;
+        color: rgba(26, 20, 12, 1);
+        margin-bottom: 20px;
+    }
+
+    #orderForm h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    #orderForm label {
+        margin-bottom: 4px;
+        font-size: 15px;
+    }
+
+    #orderForm input,
+    #orderForm select,
+    #orderForm textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    #orderForm button {
+        padding: 5px 10px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    #orderForm .total {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .box1 .text {
+        padding: 10px;
+    }
+
+    .form-container h1 {
+        font-size: 22px;
+    }
+}
