@@ -15,7 +15,7 @@
 <body>
     <div class="middle">
         <h1> Zobacz dostępne produkty</h1>
-        <p> Dla wszystkich produktów dostępna jest opcja dodania własnych zdjęć jak i opcja wybrania zdjęć z portfolio, lub też z prywatnej kolekcji. Wymiary formtów zawsze podane sa w centymetrach.</p>
+        <p> Dla wszystkich produktów dostępna jest opcja dodania własnych zdjęć jak i opcja wybrania zdjęć z portfolio, lub też z prywatnej kolekcji. Wymiary formatów zawsze podane sa w centymetrach.</p>
     </div>
     <div class="packages">
         <div class="box">
@@ -116,7 +116,7 @@
             <ul id="selectedProductsList"></ul>
         </div>
 
-        <!-- Ukryte pole do przesyłania danych o produktach -->
+        <!-- Pole ukryte, służy do przesyłania listy produktów przez formularz -->
         <input type="hidden" id="selectedProductsInput" name="selectedProducts">
 
         <label for="comments">Uwagi:</label>
@@ -158,8 +158,8 @@
     <footer>
         <div class="copyright">&copy;doublemarta</div>
         <div class="social_media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared">Facebook</a>
+            <a href="https://youtu.be/nSDgHBxUbVQ?si=lprXq0LeU1N81Qna">Instagram</a>
         </div>
     </footer>
 
@@ -208,16 +208,13 @@
                 alert("Proszę wybrać produkt przed dodaniem.");
                 return;
             }
-
             // Dodanie produktu do listy
             selectedProducts.push({
                 name: productName,
                 price: productPrice,
             });
-
             updateSelectedProducts();
         }
-
         // Obsługa kliknięcia przycisku „Dodaj produkt”
         addProductButton.addEventListener("click", addProduct);
     });
@@ -255,7 +252,6 @@
         }
     });
 </script>
-
 
 </body>
 </html>

@@ -31,7 +31,7 @@ h2{
     position: relative;
     margin-left: 10vw;
     width: 35%;
-    height: 50vh; /* Pełna wysokość widoku */
+    height: 50vh;
     background: url('port/53.JPG') center/cover no-repeat;
     float: left;
     overflow: hidden;
@@ -57,7 +57,7 @@ p {
     position: relative;
     margin-right: 10vw;
     width: 35%;
-    height: 50vh; /* Pełna wysokość widoku */
+    height: 50vh;
     background: url('port/56.JPG') center/cover no-repeat;
     float: right;
     overflow: hidden;
