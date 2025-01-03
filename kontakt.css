@@ -203,7 +203,7 @@ body {
 
 .map-container {
     width: 95%;
-    height: 400px;
+    height: 400px; /* Standardowa wysokość dla desktop */
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -309,11 +309,11 @@ body {
     }
 
     .map-container {
-        min-height: 400px;
-        margin-bottom: 20px;
+        min-height: 400px; /* Niższa wysokość dla mniejszych ekranów */
+        margin-bottom: 20px; /* Odstęp nadal działa */
     }
 
     .map-container iframe {
-        height: 300px;
+        height: 300px; /* Dopasowanie wysokości iframe */
     }
 }
