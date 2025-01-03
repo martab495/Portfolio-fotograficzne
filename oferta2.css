@@ -140,6 +140,36 @@ h2 {
       padding: 20px;
 }
 
+.calendar {
+    width: 1600px;
+    margin: 0 auto; /* Wyśrodkuj kalendarz */
+    padding: 20px;
+    background-color: #f9f9f9; /* Tło kalendarza */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.fc-toolbar button {
+    background-color: #4CAF50; /* Kolor tła przycisków */
+    color: white; /* Kolor tekstu przycisków */
+    border: none; /* Usuń obramowanie */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    padding: 10px 15px; /* Odstępy wewnętrzne */
+    font-size: 14px; /* Rozmiar czcionki */
+    transition: background-color 0.3s ease; /* Efekt hover */
+}
+
+.fc-toolbar button:hover {
+    background-color: #45a049; /* Ciemniejszy zielony przy najechaniu */
+    cursor: pointer;
+}
+
+/* Stylizacja tytułu */
+.fc-toolbar-title {
+    font-size: 20px; /* Rozmiar czcionki tytułu */
+    font-weight: bold;
+    color: #333; /* Kolor tekstu */
+}
+
 @media (max-width: 768px){
     .middle {
         width: 90%;
@@ -192,15 +222,6 @@ h2 {
 
     .box1 .text p {
         font-size: 10px;
-    }
-
-    #calendar {
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background-color: #fff;
     }
 
     .box1 .price {
