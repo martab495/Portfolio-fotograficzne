@@ -1,0 +1,14 @@
+.packages{
+    margin-top: 200px;
+}
+@media (max-width: 768px){
+    .packages{
+        margin-top: 200px;
+    }
+    .box1 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border: 2px solid #CABAAC;
+    }
+}

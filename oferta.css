@@ -70,3 +70,43 @@ p {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px){
+    .middle {
+          top: 20%;
+          left: 50%;
+          width: 75%;
+          padding: 25px;
+      }
+
+    .middle h1 {
+          font-size:20px;
+      }
+
+    h2{
+        font-size:18px;
+    }
+
+    .left {
+        margin-top: 80%;
+        position: relative;
+        margin-left: 7vw;
+        width: 80%;
+        height: 50vh;
+    }
+    p {
+        padding: 8px;
+        width: 150px;
+        height: auto;
+        font-size: 16px;
+
+    }
+    .right {
+        margin-top: 20%;
+        position: relative;
+        margin-left: 7vw;
+        width: 80%;
+        height: 50vh;
+        margin-bottom: 50px;
+    }
+}
