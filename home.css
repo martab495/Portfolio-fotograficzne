@@ -87,5 +87,7 @@
     .left-side img {
         object-position: right top;
     }
-
+    #mobilemenu {
+        background-color: rgba(207, 174, 154, 0.90);
+    }
 }
