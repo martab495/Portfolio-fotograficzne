@@ -10,8 +10,9 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100%;
 }
+
 
 /* Lewy kontener z obrazem i cytatem */
 
@@ -198,22 +199,43 @@ body {
     margin-bottom: 10px;
 }
 
+/* Mapka */
+
 .map-container {
     width: 95%;
+    height: 400px; /* Standardowa wysokość dla desktop */
     overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* Wersja dla małych ekranów */
 @media (max-width: 768px) {
+
     .container {
         flex-direction: column;
     }
 
-    .left-side {
-        height: 100vh;
+    .info-section {
+        flex-direction: column;
     }
+
+    .divider {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .left-side {
+        background: url('port/33.JPG') center/cover no-repeat;
+        position: relative;
+    }
+
 
     .left-side-text {
         margin-top: 20px;
@@ -242,24 +264,36 @@ body {
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 8px;
     }
 
     .contact-form button {
-        font-size: 18px;
-        padding: 8px 15px;
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-top: 50px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .info-section {
-        flex-direction: column;
-        padding: 10px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .info-cards {
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 50px;
+        gap: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .info-card h2 {
@@ -274,9 +308,12 @@ body {
         font-size: 12px;
     }
 
-    .map-container iframe {
-        height: 450px;
-        margin-top: 20px;
+    .map-container {
+        min-height: 400px; /* Niższa wysokość dla mniejszych ekranów */
+        margin-bottom: 20px; /* Odstęp nadal działa */
     }
 
+    .map-container iframe {
+        height: 300px; /* Dopasowanie wysokości iframe */
+    }
 }

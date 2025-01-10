@@ -105,14 +105,6 @@
     margin-bottom: 50px;
 }
 
-.filter-buttons .button {
-    background: rgba(26, 20, 12, 0.6);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 35px;
-    text-decoration: none;  
-}
 
 .gallery {
     margin-top: 50px;
@@ -148,20 +140,31 @@
     color: #E5D9CE; /* Kolor tekstu */
 }
 
-.cta .button {
+.filter-buttons .button, .cta .button {
     background: rgba(26, 20, 12, 0.6);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 35px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
-  /* Wersja dla małych ekranów */
 
+.filter-buttons .button:hover, .cta .button:hover {
+    background-color: #000;
+}
+
+
+  /* Wersja dla małych ekranów */
 @media (max-width: 768px) {
     .witamy {
-        height: 70vh; /* wysokość nagłówka */
         text-align: center;
+        position: relative;
+        width: 100vw;
+        height: 100vh; /* Pełna wysokość widoku */
+        float: none;
+        overflow: hidden;
     }
 
     .witamy1 h1 {
@@ -206,4 +209,5 @@
     .filter-buttons .button {
         font-size: 25px;
     }
+
 }
