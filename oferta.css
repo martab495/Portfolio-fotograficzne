@@ -25,7 +25,9 @@ h2{
     font-size:35px;
     color: #E5D9CE;
 }
-
+.left, .right {
+    cursor: pointer;
+}
 .left {
     margin-top: 20%;
     position: relative;

@@ -83,6 +83,12 @@ h1 {
     color: #E5D9CE;
 }
 
+
+#orderForm #product{
+    background-color: #86715c;
+    height: 30px;
+    border-color: transparent;
+}
 #orderForm button {
 
     display: inline-block;

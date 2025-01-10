@@ -89,6 +89,7 @@ nav {
 
 footer {
     color: #E5D9CE;
+    background-color:  rgba(134, 113, 92, 0.7);
     display: flex;
     flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
     justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
@@ -147,6 +148,11 @@ footer .social_media a {
         color: #341E12;
         font-size: 1.5em;
     }
+    footer {
+        width: 100%;
+        margin-top: 20px;
+        background-color:  rgba(134, 113, 92, 0.7);
+    }
 
     footer .copyright {
         font-size: 10px;
@@ -154,7 +160,7 @@ footer .social_media a {
     }
 
     footer .social_media {
-        margin-right: 1vw;
+        margin-right: 3vw;
     }
 
     footer .social_media a {
