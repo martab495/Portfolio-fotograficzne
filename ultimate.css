@@ -94,11 +94,11 @@ footer {
     flex-wrap: wrap; /* Pozwala na zawijanie elementów w przypadku braku miejsca */
     justify-content: space-between; /* Rozmieść elementy po przeciwnych stronach */
     align-items: center;
-    padding: 1vw 2vw; /*Dodaj odstępy wewnętrzne */
+    padding: 1vw 1vw; /*Dodaj odstępy wewnętrzne */
     position: fixed;
     bottom: 0;
     height: auto;
-    width: 95%; /* Rozciągnij stopkę na pełną szerokość */
+    width: 98%; /* Rozciągnij stopkę na pełną szerokość */
     z-index: 10;
 }
 

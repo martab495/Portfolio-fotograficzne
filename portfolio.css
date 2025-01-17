@@ -138,19 +138,12 @@
     border-bottom: 5px solid #E5D9CE;
 }
 
-
-.portfolio-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-footer {
-    background-color: #86715c;
-}
 footer .invit {
     font-weight:lighter;
     font-style:italic;
     font-size: 2vh;
     text-align: center;
+    margin: 0px;
 }
 
 
